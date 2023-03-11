@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Website</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    
+    
+    <link rel="stylesheet" href="style.css">
+
+    
+    
+  
+</head>
+<body>
+
+    <header class="header">
+
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+               tuneIN
+              </a>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+            <div class="container-fluid"> 
+              
+              
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#">Log In</a>
+                  <a class="nav-link" href="#">Sign Up</a>
+                  <a class="nav-link" href="#">Podcasts</a>
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Albums</a>
+                </div>
+                </div>
+            </div>
+        </nav>
+        
+                
+          
+         
+
+    </header>
+
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>MUSIC IS <br> ADDICTION</h3>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="playMusic()">START</button>
+
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+              
+                  
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Music Player</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>Radio</p>
+                      <div class="buttons">
+                        <div class="prev-track" onclick="prevTrack()">
+                          <i class="fa fa-step-backward fa-2x"></i>
+                        </div>
+                        <div class="playpause-track" onclick="playpauseTrack()">
+                          <i class="fa fa-play-circle fa-5x"></i>
+                        </div>
+                        <div class="next-track" onclick="nextTrack()">
+                          <i class="fa fa-step-forward fa-2x"></i>
+                        </div>
+                      </div>
+                   
+                      
+                      <div class="slider_container">
+                        <div class="current-time">00:00</div>
+                        <input type="range" min="1" max="100"
+                          value="0" class="seek_slider" onchange="seekTo()">
+                        <div class="total-duration">00:00</div>
+                      </div>
+                   
+                      <div class="slider_container">
+                        <i class="fa fa-volume-down"></i>
+                        <input type="range" min="1" max="100"
+                          value="99" class="volume_slider" onchange="setVolume()">
+                        <i class="fa fa-volume-up"></i>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+              
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </section>
+
+    
+
+
+
+    <section class="artist" id="artist">
+
+        <h1 class="heading">Tune gallery</h1>
+        
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/artist-1.jpg" alt="">
+                    
+                </div>
+                <div class="content">
+                    
+                    <h3>Shankar Mahadevan</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/artist-2.jpg" alt="">
+                    
+                </div>
+                <div class="content">
+                    
+                    <h3>Shreya Ghoshal</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/artist-3.jpg" alt="">
+                    
+                </div>
+                <div class="content">
+                    
+                    <h3>Karthik</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/artist-4.jpg" alt="">
+                    
+                </div>
+                <div class="content">
+                    
+                    <h3>Mohana bhogaraju</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/artist-5.jpg" alt="">
+                    
+                </div>
+                <div class="content">
+                    
+                    <h3>Arman Malik</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/artist-6.jpg" alt="">
+                    
+                </div>
+                <div class="content">
+                    
+                    <h3>K S Chitra</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/artist-7.jpg" alt="">
+                    
+                </div>
+                <div class="content">
+                    
+                    <h3>Hariharan</h3>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/artist-8.jpg" alt="">
+                    
+                </div>
+                <div class="content">
+                    
+                    <h3>Chinmayi</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
